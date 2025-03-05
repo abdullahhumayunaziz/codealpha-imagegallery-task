@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE GALLERY</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="galleryimages/images.jpg">
+</head>
+<body>
+
+  <center><h1>IMAGE GALLERY</h1></center>
+      <div class="full-img" id="fullImgBox">
+        <img src="galleryimages/360_F_503100390_kfyQTQesJKAjV1uvfBxHEy58BQefd71t.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+      </div>
+
+      <div class="img-gallery">
+        <img src="images.jpg" onclick="openFullImg(this.src)">
+        <img src="images.jpg.jpg" onclick="openFullImg(this.src)">
+        <img src="free-photo-of-hirsehead-and-flame-nebula.jpeg" onclick="openFullImg(this.src)" class="img1">
+        <img src="images (1).jpg" onclick="openFullImg(this.src)">
+        <img src="images (2).jpg" onclick="openFullImg(this.src)" class="img1">
+        <img src="images (3).jpg" onclick="openFullImg(this.src)" class="img1">
+        <img src="images (4).jpg" onclick="openFullImg(this.src)" class="img1">
+        <img src="images (5).jpeg" onclick="openFullImg(this.src)" class="img1">
+        <img src="61ITupDVPQL.jpg" onclick="openFullImg(this.src)">
+      </div>
+
+      <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+          fullImgBox.style.display = "flex"
+          fullImg.src = pic;
+        }
+        function closeFullImg(){
+          fullImgBox.style.display = "none";
+        }
+      </script>
+</body>
+</html>
